@@ -39,7 +39,17 @@ ${answers.license}
 
 ## Contributing
 
-${answers.contributing}
+### Collaborators
+
+${answers.collaborators}
+
+### Third-Party Assets
+
+${answers.thirdParty}
+
+### Additional Documentation
+
+${ansewrs.documentation}
 
 ## Tests
 
