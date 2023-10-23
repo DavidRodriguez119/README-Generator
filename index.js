@@ -38,7 +38,7 @@ const questions = [
         type: `list`,
         name: `license`,
         message: `What license are you using for your project?`,
-        choices: [`MIT`, `GNU-V3.0`, `Apache`, `BSD 2`],
+        choices: [`MIT`, `Apache`, `BSD 2`],
     },
     {
         type: `input`,
@@ -75,7 +75,71 @@ const answers = {};
 
 // TODO: Create a function to write README file
 function writeToFile(answers) {
+    return `# ${answers.projectName}
+${answers.licenseBatch}
 
+## Description
+
+Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+
+- What was your motivation?
+  - ${answers.projectMotivation} 
+- What is the USER STORY of this project?
+  - ${answers.userStory}
+- What problem does it solve?
+  - ${answers.problem}
+- What did you learn?
+  - ${answers.lesson}
+
+## Table of Contents
+
+If your README is long, add a table of contents to make it easy for users to find what they need.
+
+- [Installation](#installation)
+- [Usage Information](#usage-information)
+- [License](#license)
+- [Contributing](#contributing)
+- [Test](#tests)
+- [Questions](#questions)
+
+
+## Installation
+
+${answers.installation}
+
+## Usage Information  
+
+${answers.usageInfo}
+
+## License
+
+${answers.license}
+
+## Contributing
+
+### Collaborators
+
+${answers.collaborators}
+
+### Third-Party Assets
+
+${answers.thirdParty}
+
+### Additional Documentation
+
+${answers.documentation}
+
+## Tests
+
+${answers.tests}
+
+## Questions
+
+GitHub Username: ${answers.gitHub}
+
+GitHub Link: ${answers.gitHubLink}
+
+Reach out at ${answers.email}`
 };
 
 // TODO: Create a function to initialize app
@@ -84,9 +148,24 @@ async function init() {
     for (const question of questions){
         const {name} = question;
         const response = await inquirer.prompt(question);
-        answers[name] = response[name]
+        if (name === `gitHub`) {
+            answers.gitHubLink = `https://github.com/${response[name]}`;
+        };
+        answers[name] = response[name];
+        if (name === `license`){
+            if (answers[name] === `MIT`) {
+                answers.licenseBatch = `[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)`
+            } else if (answers[name] === `Apache`) {
+                answers.licenseBatch = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+            } else if (answers[name] === `BSD 2`) {
+                answers.licenseBatch = `[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`
+            };
+        }
     };
-    writeToFile(answers);
+    // Generate README.md
+    fs.writeFile(`README.md`, writeToFile(answers), (err) => 
+    err ? console.log(err) : console.log(`Your page has been created :)`)
+    );
 };
 
 // Function call to initialize app

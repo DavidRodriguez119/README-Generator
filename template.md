@@ -1,4 +1,5 @@
-# ${projectName}
+# ${answers.projectName}
+${answers.licenseBatch}
 
 ## Description
 
@@ -49,7 +50,7 @@ ${answers.thirdParty}
 
 ### Additional Documentation
 
-${ansewrs.documentation}
+${answers.documentation}
 
 ## Tests
 
@@ -57,5 +58,8 @@ ${answers.tests}
 
 ## Questions
 
-Look into my GitHub: ${answers.gitHub}
+GitHub Username: ${answers.gitHub}
+
+GitHub Link: ${answers.gitHubLink}
+
 Reach out at ${answers.email}
