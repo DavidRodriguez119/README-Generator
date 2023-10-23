@@ -1,4 +1,5 @@
-# ${projectName}
+# ${answers.projectName}
+${answers.licenseBatch}
 
 ## Description
 
@@ -39,7 +40,17 @@ ${answers.license}
 
 ## Contributing
 
-${answers.contributing}
+### Collaborators
+
+${answers.collaborators}
+
+### Third-Party Assets
+
+${answers.thirdParty}
+
+### Additional Documentation
+
+${answers.documentation}
 
 ## Tests
 
@@ -47,5 +58,8 @@ ${answers.tests}
 
 ## Questions
 
-Look into my GitHub: ${answers.gitHub}
+GitHub Username: ${answers.gitHub}
+
+GitHub Link: ${answers.gitHubLink}
+
 Reach out at ${answers.email}
