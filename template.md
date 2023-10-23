@@ -5,13 +5,13 @@
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
 - What was your motivation?
-  - ${projectMotivation} 
+  - ${answers.projectMotivation} 
 - What is the USER STORY of this project?
-  - ${userStory}
+  - ${answers.userStory}
 - What problem does it solve?
-  - ${problem}
+  - ${answers.problem}
 - What did you learn?
-  - ${lesson}
+  - ${answers.lesson}
 
 ## Table of Contents
 
@@ -27,24 +27,25 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-${installation}
+${answers.installation}
 
 ## Usage Information  
 
-${usageInfo}
+${answers.usageInfo}
 
 ## License
 
-${license}
+${answers.license}
 
 ## Contributing
 
-${contributing}
+${answers.contributing}
 
 ## Tests
 
-${tests}
+${answers.tests}
 
 ## Questions
 
-${questions}
+Look into my GitHub: ${answers.gitHub}
+Reach out at ${answers.email}
