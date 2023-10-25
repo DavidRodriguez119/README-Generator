@@ -31,7 +31,7 @@ const questions = [
     },
     {
         type: `input`,
-        name: `usageinfo`,
+        name: `usageInfo`,
         message: `Provide instructions for the use of your application:`
     },
     {

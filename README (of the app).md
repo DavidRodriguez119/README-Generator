@@ -28,6 +28,14 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
+## License
 
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
+## Additional Documentation
+
+How to write a professional README file:
 https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+
+## Screenshot of the Application
 
