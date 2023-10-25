@@ -39,3 +39,8 @@ https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
 ## Screenshot of the Application
 
+![Screenshot of the working app](./assets/screenshot.png)
+
+## Video Demonstration of the App
+
+https://drive.google.com/file/d/1TfNkwVtgH2N488BRl-E1kyHJ9-lvZBUy/view?usp=drive_link
